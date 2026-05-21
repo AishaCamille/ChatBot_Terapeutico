@@ -38,11 +38,11 @@ async function enviarParaOBackend(event) {
 
     if (!textoUsuario.trim()) return; // Não envia se estiver vazio
 
-    // 1. Mostra a sua mensagem na tela
+    // Mostra a mensagem do usuario na tela
     chatDiv.innerHTML += `<div class="user"><b>Você:</b> ${textoUsuario}</div>`;
     input.value = ""; // Limpa o campo de texto
 
-    // 2. Cria um balãozinho vazio para a IA preencher palavra por palavra
+    //  Cria um balãozinho vazio para a IA preencher palavra por palavra
     const botMsgDiv = document.createElement("div");
     botMsgDiv.className = "bot";
     botMsgDiv.innerHTML = `<b>${personagemEscolhido}:</b> <span class="texto-ia"></span>`;
@@ -50,7 +50,7 @@ async function enviarParaOBackend(event) {
     
     const spanTextoIA = botMsgDiv.querySelector(".texto-ia");
 
-    // 3. Faz a conexão real com o seu FastAPI (Back-end)
+    // 3Faz a conexão real com  FastAPI Back-end
     const response = await fetch("http://127.0.0.1:8000/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -61,7 +61,7 @@ async function enviarParaOBackend(event) {
         })
     });
 
-    // 4. Mecanismo de STREAMING: Lê a resposta palavra por palavra
+    //  Mecanismo de STREAMING: Lê a resposta palavra por palavra
     const reader = response.body.getReader();
     const decoder = new TextDecoder("utf-8");
 
