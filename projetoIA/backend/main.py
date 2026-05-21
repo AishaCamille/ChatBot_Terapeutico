@@ -29,7 +29,7 @@ PASTA_HISTORICOS = "historicos"
 class ChamadaChat(BaseModel):
     personagem: str
     mensagem_usuario: str
-    nome_usuario: str = "Aisha"
+    nome_usuario: str = "seu_nome"
 
 # ROTA GET Listar personagens
 @app.get("/api/personagens")
