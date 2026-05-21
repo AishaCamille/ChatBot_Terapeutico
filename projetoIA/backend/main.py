@@ -4,7 +4,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
-from groq import Groq  # <--- Mudamos para a Groq
+from groq import Groq  #api groq
 
 app = FastAPI(title="AI Chatbot Backend - Groq Express")
 
@@ -16,13 +16,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Coloque a sua chave da Groq diretamente aqui entre as aspas
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "espaço reservado para chave groq"
 
 # Inicializa o cliente da Groq
 client = Groq(api_key=GROQ_API_KEY)
 
-# Escolhemos o modelo Llama 3 de 8 bilhões de parâmetros na nuvem da Groq
+# modelo llama 3 escolhido, gratuito e rapido
 MODELO_GROQ = "llama-3.1-8b-instant"
 PASTA_PERSONAGENS = "personagens"
 PASTA_HISTORICOS = "historicos"
