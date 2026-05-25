@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+}
+
+.imgInicial {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+.soleil{
+    color: aliceblue;
+    height: 0vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.soleil h1{
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 0;
+}
+
+.meu-botao{
+    background: linear-gradient(45deg, rgb(38, 16, 165), black);
+    border: none;
+    border-radius: 90px;
+/*espaçamento interno*/
+    padding: 12px 30px;
+    /*texto botao*/
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    transition: background 1.5s;
+}
+
+button:hover{
+    background:black;
+}
