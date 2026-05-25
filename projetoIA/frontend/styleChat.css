@@ -1,0 +1,94 @@
+body{
+    background: black;
+   
+    
+     padding: 20px; 
+      
+}
+
+body h1 {
+color: rgb(14, 35, 140);
+font-family: 'Courier New', Courier, monospace;
+   font-size: 500%;
+   padding-top:60px;
+}
+.barra_topo{
+   background-color: rgb(11, 45, 131);
+   color:pink;
+   position: fixed; /*barra fixada no topo da tela*/
+   top:0; /**grudar no topo*/
+   left:0; /*gruda limite esquerdo*/
+   width: 100%; /*ocupa todo a largura da tela*/
+   height: 60px; /*altura da barra*/
+   display: flex; /*flwxbox p alinhar os itens*/
+   justify-content: space-between;
+   align-items: center; /*centraliza itens verticalmente*/
+   padding: 0 40px; /*espaçamento interno nas laterais*/
+   z-index: 1000; /*garante que a barra fique por cima de tudo na tela*/
+   box-sizing: border-box; /* Evita que o padding quebre a largura de 100% */
+
+}
+
+.links{
+   display: flex;
+   gap: 20px; /*espaçamento entre os links*/
+   
+}
+
+.link-item{
+   text-decoration: none;
+   color:black;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 500;
+   transition: color 0.2s;
+   font-size: 23px;
+}
+
+.link-item:hover{
+   color:rgb(49, 78, 191);
+}
+/*chat*/
+
+#chat { 
+   border: 1px solid #000000;
+   height: 300px; 
+   overflow-y: scroll;
+   padding: 10px; 
+   margin-bottom: 10px; 
+   background: #9da5d3; 
+}
+.user { 
+   color: rgb(14, 54, 196); 
+   margin: 10px 0px 15px 500px;
+   background-color: #000000;
+   border-radius: 30px;
+   overflow: hidden;
+   padding: 15px;
+
+}
+.bot { 
+   color: rgb(0, 0, 0); 
+   margin: 10px 500px 15px 0px; /* Topo | Direita | Base | Esquerda*/
+   background-color: rgb(14, 54, 196);
+   border-radius: 30px;
+   overflow: hidden;
+   padding: 15px;
+}
+
+   .form-select{
+      background-color: #9da5d3;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+      font-weight: 600; /* Negrito padrão */
+      color: rgb(14, 54, 196) !important;
+   }
+
+   .btn-envia{
+      background-color: #ffffff !important; /* Substitua pelo SEU código de azul */
+    border-color:  rgb(14, 54, 196) !important;     /* A cor da borda do botão */
+    color:  rgb(14, 54, 196) !important;
+   }
+.titulo{
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 7px;
+}
