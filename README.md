@@ -40,3 +40,13 @@ Como melhoria futura, pretendo implementar uma **memória permanente**, permitin
 A Soleil nasceu com a proposta de ser mais do que um chatbot. A ideia é criar uma personagem acolhedora, otimista e agradável de conversar, proporcionando uma experiência leve e natural.
 
 Este projeto ainda está em desenvolvimento e novas funcionalidades serão adicionadas futuramente, como sistema de login, memória de longo prazo e novas formas de personalização para cada usuário.
+
+---
+## 📌 Melhorias Futuras
+
+- [ ] Sistema de login
+- [ ] Memória permanente
+- [ ] Perfil individual para cada usuário
+- [ ] Upload de arquivos
+- [ ] Personalização da personalidade da Soleil
+- [ ] Suporte a múltiplos idiomas

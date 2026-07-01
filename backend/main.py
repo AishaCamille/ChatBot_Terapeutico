@@ -1,10 +1,12 @@
 import os
 import json
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from groq import Groq  # api
+import uvicorn
 
 app = FastAPI(title="AI Chatbot Backend - Groq Express")
 
@@ -128,7 +130,10 @@ def obter_historico(personagem:str):
     #verifica se o arquivo existe, le e devolve as mensagens salvas
     if os.path.exists(caminho_hist):
         with open(caminho_hist, "r", encoding="utf-8") as f:
-                  return json.load(f) #retorna o json das mensagens
+             return json.load(f) #retorna o json das mensagens
 
     #retorna lista vazia se não existir historico ainda
     return[]
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    
